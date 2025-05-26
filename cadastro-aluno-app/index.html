@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo ao Cadastro Escolar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Orbitron', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+      display: flex;
+    }
+
+    .sidebar {
+      width: 210px;
+      background: #232946;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+
+    .sidebar h2 {
+      font-size: 1.3em;
+      margin-bottom: 32px;
+      letter-spacing: 1px;
+      color: #eebbc3;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 0 12px 32px;
+      border-left: 4px solid transparent;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      font-size: 1.08em;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      background: #eebbc3;
+      color: #232946;
+      border-left: 4px solid #232946;
+    }
+
+    .main-content {
+      margin-left: 210px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px #0002;
+      padding: 48px 32px 40px 32px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #232946;
+      font-size: 2.1em;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1em;
+      margin-bottom: 32px;
+    }
+
+    .main-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .main-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #e0eafc;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px #0001;
+      padding: 28px 24px 20px 24px;
+      min-width: 120px;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      text-decoration: none;
+      color: #232946;
+      font-weight: 600;
+      font-size: 1.08em;
+    }
+
+    .main-link:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 6px 18px #eebbc3aa;
+      background: #eebbc3;
+      color: #232946;
+    }
+
+    .main-link-icon {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        position: static;
+        width: 100vw;
+        flex-direction: row;
+        height: auto;
+        min-height: unset;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .sidebar h2 {
+        display: none;
+      }
+
+      .nav-links {
+        flex-direction: row;
+        gap: 0;
+        width: 100vw;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        padding: 14px 18px;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+      }
+
+      .nav-links a.active,
+      .nav-links a:hover {
+        border-left: none;
+        border-bottom: 4px solid #232946;
+        background: #eebbc3;
+        color: #232946;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding-top: 24px;
+      }
+
+      .container {
+        margin: 0 6px;
+        padding: 24px 6px 18px 6px;
+      }
+
+      h1 {
+        font-size: 1.3em;
+      }
+
+      .main-links {
+        gap: 12px;
+      }
+
+      .main-link {
+        min-width: 90px;
+        padding: 18px 8px 12px 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="sidebar">
+    <h2>Sistema Escolar</h2>
+    <div class="nav-links">
+      <a href="index.html" id="nav-index" class="active">Início</a>
+      <a href="aluno.html" id="nav-aluno">Aluno</a>
+      <a href="professor.html" id="nav-professor">Professor</a>
+      <a href="turma.html" id="nav-turma">Turma</a>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="container">
+      <h1>Bem-vindo ao Sistema Escolar</h1>
+      <p>Gerencie alunos, professores e turmas de forma simples, visual e rápida.</p>
+      <div class="main-links">
+        <a href="aluno.html" class="main-link">
+          <span class="main-link-icon">👩‍🎓</span>
+          <span>Alunos</span>
+        </a>
+        <a href="professor.html" class="main-link">
+          <span class="main-link-icon">👨‍🏫</span>
+          <span>Professores</span>
+        </a>
+        <a href="turma.html" class="main-link">
+          <span class="main-link-icon">🏫</span>
+          <span>Turmas</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

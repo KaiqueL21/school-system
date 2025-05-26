@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Aluno</title>
+  <link rel="stylesheet" href="aluno/aluno.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="sidebar">
+    <h2>Sistema Escolar</h2>
+    <div class="nav-links">
+      <a href="index.html" id="nav-index">Início</a>
+      <a href="aluno.html" id="nav-aluno" class="active">Aluno</a>
+      <a href="professor.html" id="nav-professor">Professor</a>
+      <a href="turma.html" id="nav-turma">Turma</a>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="container">
+      <h1>Cadastro de Aluno</h1>
+      <form id="aluno-form">
+        <label>Nome: <input type="text" name="nome" required></label>
+        <label>Data de Nascimento: <input type="date" name="data_nascimento" required></label>
+        <label>Nota 1º Semestre: <input type="number" name="nota_primeiro_semestre" step="0.01" required></label>
+        <label>Nota 2º Semestre: <input type="number" name="nota_segundo_semestre" step="0.01" required></label>
+        <label>ID da Turma: <input type="number" name="turma_id" required></label>
+        <button type="submit" class="main-btn">Cadastrar Aluno</button>
+      </form>
+      <hr>
+      <button id="listar-alunos" class="main-btn">Listar Alunos</button>
+      <div id="alunos-lista"></div>
+      <!-- Pop-up para editar aluno -->
+      <div id="edit-popup" class="popup">
+        <h2>Editar Aluno</h2>
+        <form id="update-form">
+          <input type="hidden" id="aluno-id">
+          <label>Nome: <input type="text" id="update-nome" required></label>
+          <label>Data de Nascimento: <input type="date" id="update-data_nascimento" required></label>
+          <label>Nota 1º Semestre: <input type="number" id="update-nota_primeiro_semestre" step="0.01" required></label>
+          <label>Nota 2º Semestre: <input type="number" id="update-nota_segundo_semestre" step="0.01" required></label>
+          <label>ID da Turma: <input type="number" id="update-turma_id" required></label>
+          <button type="submit" class="main-btn">Atualizar</button>
+          <button type="button" id="close-popup" class="main-btn">Fechar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="aluno/aluno.js"></script>
+</body>
+
+</html>

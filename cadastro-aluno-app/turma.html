@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Turmas</title>
+  <link rel="stylesheet" href="turma/turma.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="sidebar">
+    <h2>Sistema Escolar</h2>
+    <div class="nav-links">
+      <a href="index.html" id="nav-index">Início</a>
+      <a href="aluno.html" id="nav-aluno">Aluno</a>
+      <a href="professor.html" id="nav-professor">Professor</a>
+      <a href="turma.html" id="nav-turma" class="active">Turma</a>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="container">
+      <h1>Gerenciamento de Turmas</h1>
+      <form id="turma-form">
+        <label>ID da Turma: <input type="number" name="turma_id" required></label>
+        <label>Nome da Turma: <input type="text" name="nome_turma" required></label>
+        <label>Descrição: <textarea name="descricao" required></textarea></label>
+        <button type="submit" class="main-btn">Cadastrar Turma</button>
+      </form>
+      <hr>
+      <button id="listar-turmas" class="main-btn">Listar Turmas</button>
+      <div id="turmas-lista"></div>
+      <!-- Pop-up para editar turma -->
+      <div id="edit-popup" class="popup">
+        <h2>Editar Turma</h2>
+        <form id="update-form">
+          <input type="hidden" id="turma-id">
+          <label>ID da Turma: <input type="number" id="update-turma_id" required></label>
+          <label>Nome da Turma: <input type="text" id="update-nome_turma" required></label>
+          <label>Descrição: <textarea id="update-descricao" required></textarea></label>
+          <button type="submit" class="main-btn">Atualizar</button>
+          <button type="button" id="close-popup" class="main-btn">Fechar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="turma/turma.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Professor</title>
+  <link rel="stylesheet" href="professor/professor.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="sidebar">
+    <h2>Sistema Escolar</h2>
+    <div class="nav-links">
+      <a href="index.html" id="nav-index">Início</a>
+      <a href="aluno.html" id="nav-aluno">Aluno</a>
+      <a href="professor.html" id="nav-professor" class="active">Professor</a>
+      <a href="turma.html" id="nav-turma">Turma</a>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="container">
+      <h1>Cadastro de Professor</h1>
+      <form id="professor-form">
+        <label>Nome: <input type="text" name="nome" required></label>
+        <label>Especialização: <input type="text" name="especializacao" required></label>
+        <label>Data de Nascimento: <input type="date" name="data_nascimento" required></label>
+        <label>ID da Turma: <input type="number" name="turma_id" required></label>
+        <button type="submit" class="main-btn">Cadastrar Professor</button>
+      </form>
+      <hr>
+      <button id="listar-professores" class="main-btn">Listar Professores</button>
+      <div id="professores-lista"></div>
+      <!-- Pop-up para editar professor -->
+      <div id="edit-popup" class="popup">
+        <h2>Editar Professor</h2>
+        <form id="update-form">
+          <input type="hidden" id="professor-id">
+          <label>Nome: <input type="text" id="update-nome" required></label>
+          <label>Especialização: <input type="text" id="update-especializacao" required></label>
+          <label>Data de Nascimento: <input type="date" id="update-data_nascimento" required></label>
+          <label>ID da Turma: <input type="number" id="update-turma_id" required></label>
+          <button type="submit" class="main-btn">Atualizar</button>
+          <button type="button" id="close-popup" class="main-btn">Fechar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="professor/professor.js"></script>
+</body>
+
+</html>
